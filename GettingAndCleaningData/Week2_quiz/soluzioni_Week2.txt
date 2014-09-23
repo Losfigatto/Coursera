@@ -1,0 +1,41 @@
+* Punto 1
+eseguito:
+    library(httr)
+	punto1<- GET("https://api.github.com/users/jtleek/repos")
+	contentJSON <- content(punto1)
+	library(jsonlite)
+	jsonGit<-jsonlite::fromJSON(toJSON(contentJSON))
+	jsonGit[jsonGit$name=="datasharing","created_at"]
+	
+Risultato:
+	2013-11-07T13:25:07Z
+	
+* Punto 2
+
+Risultato:
+	sqldf("select pwgtp1 from acs where AGEP < 50")
+	
+* Punto 3
+
+Risultato:
+	sqldf("select distinct AGEP from acs")
+	
+* Punto 4
+eseguito:
+	con = url("http://biostat.jhsph.edu/~jleek/contact.html")
+	htmlCode = readLines(con)
+	close(con)
+	htmlCode
+	c(nchar(htmlCode[10]),nchar(htmlCode[20]),nchar(htmlCode[30]),nchar(htmlCode[100]))
+
+Risultato:
+	45 31  7 25
+	
+* Punto 5
+eseguito:
+	fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fwksst8110.for"
+	punto5 <- read.fwf(file=url(fileUrl),skip=4,widths=c(12, 7,4, 9,4, 9,4, 9,4))
+	sum(punto5[4])
+Risultato:
+
+ 32426.7

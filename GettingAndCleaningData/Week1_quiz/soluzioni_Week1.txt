@@ -1,0 +1,50 @@
+* Punto 1
+
+esempi utilizzati
+	
+	fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Fss06hid.csv"
+	dataset <- data.frame(A = sample(c(NA, 1:10), 40, rep = TRUE), B = rnorm(40))
+	
+eseguito
+	nrow(subset(esercizio1Data,VAL==24))
+	
+Risultato 
+	53
+
+* Punto 2
+
+	Risultato: Tidy data has one variable per column.
+	
+*Punto 3
+
+eseguito:
+	fileUrl <- "http://d396qusza40orc.cloudfront.net/getdata%2Fdata%2FDATA.gov_NGAP.xlsx"
+	download.file(fileUrl,destfile="./esercizio1/punto3.xlsx")
+	dat <- read.xlsx("punto3.xlsx",sheetIndex=1,colIndex=7:15,rowIndex=18:23)
+	
+	
+risultato:
+	36534720
+
+* Punto 4
+
+eseguito:
+	library(XML)
+	fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Frestaurants.xml"
+	punto4 <- xmlTreeParse(fileUrl,useInternal=TRUE)
+	rootNode <- xmlRoot(punto4)
+	xmlName(rootNode)
+	zipcode<- xpathSApply(rootNode,"//zipcode",xmlValue)
+	subset(zipcode,zipcode==21231)
+
+Risultato:
+	127
+
+* Punto 5
+
+eseguito:
+	fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Fss06pid.csv"
+	download.file(fileUrl,destfile="punto5.csv",method="curl")
+	punto5<-read.csv("punto5.csv")
+	
+Risultato: DT[,mean(pwgtp15),by=SEX]
