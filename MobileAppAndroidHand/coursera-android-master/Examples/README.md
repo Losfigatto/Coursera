@@ -1,0 +1,136 @@
+# Index By week
+
+## Week 1
+
+* [HelloAndroid](./Week1/HelloAndroid/)
+* [TheAnswer](./Week1/TheAnswer/)
+
+## Week 2
+
+* [AppFundamentalsVideoSourceExamples](./Week2/AppFundamentalsVideoSourceExamples/)
+* [MapLocation](./Week2/MapLocation/)
+* [MapLocationFromContacts](./Week2/MapLocationFromContacts/)
+
+## Week 3
+
+* [FragmentDynamicLayout](./Week3/FragmentDynamicLayout/)
+* [FragmentDynamicLayoutWithActionBar](./Week3/FragmentDynamicLayoutWithActionBar/)
+* [FragmentProgrammaticLayout](./Week3/FragmentProgrammaticLayout/)
+* [FragmentQuoteViewerWithActivity](./Week3/FragmentQuoteViewerWithActivity/)
+* [FragmentStaticConfigLayout](./Week3/FragmentStaticConfigLayout/)
+* [FragmentStaticLayout](./Week3/FragmentStaticLayout/)
+* [PermissionExampleBoom](./Week3/PermissionExampleBoom/)
+* [PermissionExampleBoomUser](./Week3/PermissionExampleBoomUser/)
+
+## Week 4
+
+* [HelloAndroidWithMenus](./Week4/HelloAndroidWithMenus/)
+* [UIAlertDialog](./Week4/UIAlertDialog/)
+* [UIAutoComplete](./Week4/UIAutoComplete/)
+* [UIButton](./Week4/UIButton/)
+* [UICheckBox](./Week4/UICheckBox/)
+* [UIDatePicker](./Week4/UIDatePicker/)
+* [UIGallery](./Week4/UIGallery/)
+* [UIGoogleMaps](./Week4/UIGoogleMaps/)
+* [UIGridLayout](./Week4/UIGridLayout/)
+* [UILinearLayout](./Week4/UILinearLayout/)
+* [UIListView](./Week4/UIListView/)
+* [UIRadioGroup](./Week4/UIRadioGroup/)
+* [UIRatingsBar](./Week4/UIRatingsBar/)
+* [UIRelativeLayout](./Week4/UIRelativeLayout/)
+* [UISampler](./Week4/UISampler/)
+* [UISpinner](./Week4/UISpinner/)
+* [UITabLayout](./Week4/UITabLayout/)
+* [UITableLayout](./Week4/UITableLayout/)
+* [UITimePicker](./Week4/UITimePicker/)
+* [UIToggleButton](./Week4/UIToggleButton/)
+* [UIWebView](./Week4/UIWebView/)
+* [UIDatePickerFragment] (./Week4/UIDatePickerFragment/)
+* [UITimePickerFragment] (./Week4/UITimePickerFragment/)
+* [UIViewPager] (./Week4/UIViewPager/)
+* [google-play-services_lib](./Week4/google-play-services_lib/)
+
+## Week 5
+
+* [AlarmCreate](./Week5/AlarmCreate/)
+* [BcastRecCompBcast](./Week5/BcastRecCompBcast/)
+* [BcastRecCompOrdBcast](./Week5/BcastRecCompOrdBcast/)
+* [BcastRecCompOrdBcastWithResRec](./Week5/BcastRecCompOrdBcastWithResRec/)
+* [BcastRecSinBcastDynReg](./Week5/BcastRecSinBcastDynReg/)
+* [BcastRecSinBcastStatReg](./Week5/BcastRecSinBcastStatReg/)
+* [BcastRecStickyInt](./Week5/BcastRecStickyInt/)
+* [NetworkingAndroidHttpClient](./Week5/NetworkingAndroidHttpClient/)
+* [NetworkingAndroidHttpClientJSON](./Week5/NetworkingAndroidHttpClientJSON/)
+* [NetworkingAndroidHttpClientXML](./Week5/NetworkingAndroidHttpClientXML/)
+* [NetworkingSockets](./Week5/NetworkingSockets/)
+* [NetworkingURL](./Week5/NetworkingURL/)
+* [NotificationStatusBar](./Week5/NotificationStatusBar/)
+* [NotificationStatusBarWithCustomView](./Week5/NotificationStatusBarWithCustomView/)
+* [NotificationToast](./Week5/NotificationToast/)
+* [NotificationToastWithCustomView](./Week5/NotificationToastWithCustomView/)
+* [ThreadingAsyncTask](./Week5/ThreadingAsyncTask/)
+* [ThreadingHandlerMessages](./Week5/ThreadingHandlerMessages/)
+* [ThreadingHandlerRunnable](./Week5/ThreadingHandlerRunnable/)
+* [ThreadingNoThreading](./Week5/ThreadingNoThreading/)
+* [ThreadingRunOnUiThread](./Week5/ThreadingRunOnUiThread/)
+* [ThreadingSimple](./Week5/ThreadingSimple/)
+* [ThreadingViewPost](./Week5/ThreadingViewPost/)
+
+## Week 6
+
+* [AudioVideoAudioManager](./Week6/AudioVideoAudioManager/)
+* [AudioVideoAudioRecording](./Week6/AudioVideoAudioRecording/)
+* [AudioVideoCamera](./Week6/AudioVideoCamera/)
+* [AudioVideoRingtoneManager](./Week6/AudioVideoRingtoneManager/)
+* [AudioVideoVideoPlay](./Week6/AudioVideoVideoPlay/)
+* [GraphicsBubbleProgram](./Week6/GraphicsBubbleProgram/)
+* [GraphicsBubbleXML](./Week6/GraphicsBubbleXML/)
+* [GraphicsCanvasBubble](./Week6/GraphicsCanvasBubble/)
+* [GraphicsCanvasBubbleSurfaceView](./Week6/GraphicsCanvasBubbleSurfaceView/)
+* [GraphicsFrameAnimation](./Week6/GraphicsFrameAnimation/)
+* [GraphicsPaint](./Week6/GraphicsPaint/)
+* [GraphicsShapeDraw](./Week6/GraphicsShapeDraw/)
+* [GraphicsShapeDrawXML](./Week6/GraphicsShapeDrawXML/)
+* [GraphicsTransitionDrawable](./Week6/GraphicsTransitionDrawable/)
+* [GraphicsTweenAnimation](./Week6/GraphicsTweenAnimation/)
+* [GraphicsValueAnimator](./Week6/GraphicsValueAnimator/)
+* [GraphicsViewPropertyAnimator](./Week6/GraphicsViewPropertyAnimator/)
+* [TouchGestureViewFlipperTest](./Week6/TouchGestureViewFlipperTest/)
+* [TouchGestures](./Week6/TouchGestures/)
+* [TouchIndicateTouchLocation](./Week6/TouchIndicateTouchLocation/)
+
+## Week 7
+
+* [LocationGetLocation](./Week7/LocationGetLocation/)
+* [LocationGetLocationServices](./Week7/LocationGetLocationServices/)
+* [MapEarthQuakeMap](./Week7/MapEarthQuakeMap/)
+* [SensorCompass](./Week7/SensorCompass/)
+* [SensorFilteredAccelerometer](./Week7/SensorFilteredAccelerometer/)
+* [SensorRawAccelerometer](./Week7/SensorRawAccelerometer/)
+
+## Week 8
+
+* [BluetoothSetupAndTransferData](./Week8/BluetoothSetupAndTransferData/)
+* [CheckActivityIntents](./Week8/CheckActivityIntents/)
+* [CheckBroadcastIntents](./Week8/CheckBroadcastIntents/)
+* [ContentProviderCustom](./Week8/ContentProviderCustom/)
+* [ContentProviderCustomUser](./Week8/ContentProviderCustomUser/)
+* [ContentProviderExample](./Week8/ContentProviderExample/)
+* [ContentProviderWithCursorLoader](./Week8/ContentProviderWithCursorLoader/)
+* [ContentProviderWithInsertionDeletion](./Week8/ContentProviderWithInsertionDeletion/)
+* [ContentProviderWithSimpleCursorAdapter](./Week8/ContentProviderWithSimpleCursorAdapter/)
+* [DataManagementFileExternalMemory](./Week8/DataManagementFileExternalMemory/)
+* [DataManagementFileInternalMemory](./Week8/DataManagementFileInternalMemory/)
+* [DataManagementPreferenceActivity](./Week8/DataManagementPreferenceActivity/)
+* [DataManagementSQL](./Week8/DataManagementSQL/)
+* [DataManagementSharedPreference](./Week8/DataManagementSharedPreference/)
+* [HelloAndroidTest](./Week8/HelloAndroidTest/)
+* [HelloAndroidWithLogin](./Week8/HelloAndroidWithLogin/)
+* [HelloTabWidget](./Week8/HelloTabWidget/)
+* [LoggingServiceClient](./Week8/LoggingServiceClient/)
+* [LoggingServiceWithMessenger](./Week8/LoggingServiceWithMessenger/)
+* [LoggingServiceWithMessengerClient](./Week8/LoggingServiceWithMessengerClient/)
+* [MusicPlayingServiceExample](./Week8/MusicPlayingServiceExample/)
+* [ServiceWithIPCExampleClient](./Week8/ServiceWithIPCExampleClient/)
+* [ServiceWithIPCExampleService](./Week8/ServiceWithIPCExampleService/)
+
