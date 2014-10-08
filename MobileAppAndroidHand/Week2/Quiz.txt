@@ -1,0 +1,30 @@
+* Question 1
+2 , 4
+
+*Question 2
+manifest
+
+*Question 3
+1
+
+*Question 4
+2
+
+* Question 5
+1
+
+* Question 6
+1
+
+* Question 7
+4
+
+* Question 8
+2
+
+* Question 9
+configChanges
+
+
+* Question 10
+??
