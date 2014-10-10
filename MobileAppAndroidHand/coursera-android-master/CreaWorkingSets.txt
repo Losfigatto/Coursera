@@ -1,0 +1,3 @@
+Copiare in .metadata\.plugins\org.eclipse.ui.workbench
+
+il file xml

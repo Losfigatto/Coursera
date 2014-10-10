@@ -13,6 +13,7 @@
 
 ## Week 3
 
+* [HelloAndroidWithLogin](./Week3/HelloAndroidWithLogin/)
 * [FragmentDynamicLayout](./Week3/FragmentDynamicLayout/)
 * [FragmentDynamicLayoutWithActionBar](./Week3/FragmentDynamicLayoutWithActionBar/)
 * [FragmentProgrammaticLayout](./Week3/FragmentProgrammaticLayout/)
@@ -125,7 +126,6 @@
 * [DataManagementSQL](./Week8/DataManagementSQL/)
 * [DataManagementSharedPreference](./Week8/DataManagementSharedPreference/)
 * [HelloAndroidTest](./Week8/HelloAndroidTest/)
-* [HelloAndroidWithLogin](./Week8/HelloAndroidWithLogin/)
 * [HelloTabWidget](./Week8/HelloTabWidget/)
 * [LoggingServiceClient](./Week8/LoggingServiceClient/)
 * [LoggingServiceWithMessenger](./Week8/LoggingServiceWithMessenger/)
