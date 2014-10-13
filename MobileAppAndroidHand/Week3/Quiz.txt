@@ -1,0 +1,23 @@
+1.  android.intent.action.MAIN
+
+2.  android.intent.category.MAIN
+
+3.  A String Uri
+
+4.  android.permission.VIBRATE
+
+5.  <permission>.
+
+6.  False
+
+7.  onCreateView().
+
+8.  Dynamic layouts can take advantage of contextual information that's 
+    not tracked by Android's configuration system (such as current location, 
+	usage time, or ambient light measurements).
+    
+	Dynamically-created user interfaces can adapt to an application's runtime 
+	state, such as the amount of data that needs to be displayed at any one time.
+
+9.  onDestroy().
+    onCreate().
