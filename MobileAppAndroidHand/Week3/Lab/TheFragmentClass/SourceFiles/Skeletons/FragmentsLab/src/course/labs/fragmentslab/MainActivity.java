@@ -27,9 +27,13 @@ public class MainActivity extends Activity implements
 
 			//TODO 1 - add the FriendsFragment to the fragment_container
 			
+			FragmentTransaction fragmentTransaction = getFragmentManager()
+					.beginTransaction();
 			
+			// Add the TitleFragment
+			fragmentTransaction.add(R.id.fragment_container,mFriendsFragment);
+			fragmentTransaction.commit();
 			
-
 		} else {
 
 			// Otherwise, save a reference to the FeedFragment for later use
@@ -66,12 +70,18 @@ public class MainActivity extends Activity implements
 
 			//TODO 2 - replace the fragment_container with the FeedFragment
 			
-
+			FragmentTransaction fragmentTransaction = getFragmentManager()
+					.beginTransaction();
 			
+			// Add the TitleFragment
+			fragmentTransaction.replace(R.id.fragment_container,mFeedFragment);
+			fragmentTransaction.addToBackStack(null);
+			fragmentTransaction.commit();
 
 			// execute transaction now
 			getFragmentManager().executePendingTransactions();
-
+			
+			
 		}
 
 		// Update Twitter feed display on FriendFragment
