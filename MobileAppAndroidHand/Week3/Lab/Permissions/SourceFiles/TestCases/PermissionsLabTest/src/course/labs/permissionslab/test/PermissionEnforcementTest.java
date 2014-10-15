@@ -5,6 +5,7 @@ import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.test.ActivityInstrumentationTestCase2;
+import android.util.Log;
 
 import com.robotium.solo.Solo;
 
@@ -14,6 +15,8 @@ public class PermissionEnforcementTest extends
 		ActivityInstrumentationTestCase2<ActivityLoaderActivity> {
 	private Solo solo;
 
+	private static final String TAG ="Test-Permissione";
+		
 	public PermissionEnforcementTest() {
 		super(ActivityLoaderActivity.class);
 	}
@@ -37,9 +40,11 @@ public class PermissionEnforcementTest extends
 
 		PackageManager pm = getActivity().getPackageManager();
 		try {
+			Log.i(TAG, "Avvio Test");
 			ActivityInfo activityInfo = pm.getActivityInfo(new ComponentName(
 					"course.labs.dangerousapp",
 					"course.labs.dangerousapp.DangerousActivity"), 0);
+			Log.i(TAG, "Info: "+activityInfo.permission);
 			assertTrue(
 					"PermissionEnforcementTest:" +
 					"Section One:" +
