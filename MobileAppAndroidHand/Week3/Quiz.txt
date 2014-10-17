@@ -1,6 +1,6 @@
 1.  android.intent.action.MAIN
 
-2.  android.intent.category.MAIN
+2.  android.intent.category.LAUNCHER
 
 3.  A String Uri
 
