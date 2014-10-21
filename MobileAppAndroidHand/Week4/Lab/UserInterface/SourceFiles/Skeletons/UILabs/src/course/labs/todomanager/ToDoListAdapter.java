@@ -84,7 +84,7 @@ public class ToDoListAdapter extends BaseAdapter {
 	public View getView(int position, View convertView, ViewGroup parent) {
 
 		// TODO - Get the current ToDoItem
-		final ToDoItem toDoItem = null;
+		final ToDoItem toDoItem = mItems.get(position);
 
 		// TODO - Inflate the View for this ToDoItem
 		// from todo_item.xml
