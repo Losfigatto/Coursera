@@ -2,4 +2,5 @@
 <resources>
     <string name="app_name">UIButton</string>
     <string name="press_me_string">Press Me!</string>
+    <string name="press_me_string1">Press Me 1!</string>
 </resources>

@@ -1,0 +1,29 @@
+1.
+	
+	To draw themselves
+	To respond to events directed to them
+	
+2.
+	Visibility
+	Opacity
+	Position
+3.  
+	False
+
+4.
+	The Adapter manages a data set for the AdapterView
+	Adapters can notify the AdapterView when the Adapter data changes
+	
+5.
+	View 2 takes up 3/5 of LL's width.
+
+6. 
+	onCreateContextMenu().
+	
+7.	
+	show()
+	
+8.
+	When Action Buttons cannot fit in or should not 
+	be placed on the Action Bar, they are displayed in a separate View that 
+	is accessible by touching the Action Overflow area.
