@@ -19,6 +19,7 @@
         android:orientation="vertical">
         
         <TextView 
+            android:id="@+id/elem1"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="2"
@@ -27,6 +28,7 @@
     	 />
     	
         <TextView
+            android:id="@+id/elem2"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_margin="7dp"
@@ -34,6 +36,7 @@
             android:background="#FF0000" />
     	
         <TextView
+            android:id="@+id/elem3"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="2"
@@ -49,6 +52,7 @@
 	    android:orientation="vertical" >
 
          <TextView
+             android:id="@+id/elem4"
              android:layout_width="match_parent"
              android:layout_height="0dp"
              android:layout_margin="7dp"
@@ -56,6 +60,7 @@
              android:background="#0033CC" />
     	
         <TextView
+            android:id="@+id/elemGray"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="2"
@@ -64,6 +69,7 @@
     	 />
     	
         <TextView
+            android:id="@+id/elem5"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_margin="7dp"
@@ -79,6 +85,7 @@
         android:orientation="vertical">
         
         <TextView 
+            android:id="@+id/elem6"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="2"
@@ -87,6 +94,7 @@
     	 />
     	
         <TextView
+            android:id="@+id/elem7"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_margin="7dp"
@@ -94,6 +102,7 @@
             android:background="#0033CC" />
     	
         <TextView
+            android:id="@+id/elem8"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="2"
@@ -104,9 +113,10 @@
 
 	</LinearLayout>
     <SeekBar
+       	android:id="@+id/elemSeekBar" 
         android:layout_width="match_parent"
 		android:layout_height="0dp"
 		android:layout_weight="1"
-        android:max="100" />
+        android:max="35" />
 
 </LinearLayout>
