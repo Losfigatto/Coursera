@@ -1,0 +1,23 @@
+1.
+	Notification Area Notifications
+	Toast Messages
+	Dialogs
+
+2.
+	False
+ 
+3.
+	
+4.
+	Use a Notification Area Notification when the user should be notified outside of any currently running application.
+	Use a Dialog when the application needs to get user feedback
+
+5.
+	
+6.
+	Dynamically register its BroadcastReceivers in onResume() and unregister them in onPause()
+	
+	
+10.
+Use the Context.getSystemService() method to retrieve a reference to the AlarmManager service.
+
