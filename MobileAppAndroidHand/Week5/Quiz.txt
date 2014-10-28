@@ -7,12 +7,16 @@
 	False
  
 3.
+The underlying Intent will be used by the system, rather than by the component that created it.
 	
 4.
 	Use a Notification Area Notification when the user should be notified outside of any currently running application.
 	Use a Dialog when the application needs to get user feedback
 
 5.
+Use the LocalBroadcastManager to broadcast Intents that will only be received within the same application the sends the broadcasts.
+
+Use the LocalBroadcastManager to register BroadcastReceivers that don't want to receive broadcasts from outside the application.
 	
 6.
 	Dynamically register its BroadcastReceivers in onResume() and unregister them in onPause()
@@ -20,4 +24,3 @@
 	
 10.
 Use the Context.getSystemService() method to retrieve a reference to the AlarmManager service.
-
