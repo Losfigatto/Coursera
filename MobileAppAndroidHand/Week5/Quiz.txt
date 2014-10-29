@@ -14,13 +14,33 @@ The underlying Intent will be used by the system, rather than by the component t
 	Use a Dialog when the application needs to get user feedback
 
 5.
-Use the LocalBroadcastManager to broadcast Intents that will only be received within the same application the sends the broadcasts.
-
-Use the LocalBroadcastManager to register BroadcastReceivers that don't want to receive broadcasts from outside the application.
+	Use the LocalBroadcastManager to broadcast Intents that will only be received within the same application the sends the broadcasts.
+	Use the LocalBroadcastManager to register BroadcastReceivers that don't want to receive broadcasts from outside the application.
+	Use the Context class when the broadcast must be sticky
 	
 6.
 	Dynamically register its BroadcastReceivers in onResume() and unregister them in onPause()
-	
-	
+
+7.
+	Activity.runOnUIThread()	
+	View.post()
+8.
+	Messages are used when the Handler implements the Message response.
+	Runnables are used when the Sender implements the action to be taken.
+9.
+	Alarms are fired at a particular time in the future. Regular Intent Broadcasts are handled at the time the Intent is broadcast.	
+	Notification Area Notifications inform users about events without interrupting their work, while Alarms don't directly inform users.
 10.
-Use the Context.getSystemService() method to retrieve a reference to the AlarmManager service.
+	Use the Context.getSystemService() method to retrieve a reference to the AlarmManager service.
+11.
+	If the user manually changes the time zone or modifies the system clock, RTC Alarms may fire at unpredictable times.
+	If the network resets the system clock, RTC Alarms may fire at unpredictable times.
+12.
+	setInexactRepeating() requires a specific interval constant, such as INTERVAL_FIFTEEN_MINUTES
+13.
+	HttpURLConnection.
+14.
+	DOM parsers convert an XML document into a tree structure, which can make it easier to do whole document analyses
+	DOM parsers tend to use more memory than the other kinds of Parsers we discussed in this lesson.
+	
+	
