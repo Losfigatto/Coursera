@@ -154,12 +154,14 @@ public class DownloaderTask extends AsyncTask<String, Void, String[]> {
 
 						// TODO: Check whether the result code is not MainActivity.IS_ALIVE
 
-						if (false || true) {
+						if (getResultCode()==MainActivity.IS_ALIVE) {
 
 							// TODO: If so, create a PendingIntent using the
 							// restartMainActivityIntent and set its flags
 							// to FLAG_UPDATE_CURRENT
-
+							
+							PendingIntent pendingIntent = PendingIntent.getActivity(mApplicationContext, 0,
+									restartMainActivtyIntent, PendingIntent.FLAG_UPDATE_CURRENT);
 
 
 							
@@ -176,7 +178,7 @@ public class DownloaderTask extends AsyncTask<String, Void, String[]> {
 							// TODO: Set the notification View's text to
 							// reflect whether the download completed
 							// successfully
-
+								mContentView.setTextViewText(R.id.text, successMsg);
 
 
 							
@@ -191,14 +193,18 @@ public class DownloaderTask extends AsyncTask<String, Void, String[]> {
 
 
 							
-							
-							
+							Notification.Builder notificationBuilder = new Notification.Builder(
+									mApplicationContext)
+								.setSmallIcon(android.R.drawable.stat_sys_warning)
+								.setAutoCancel(true)
+								.setContentIntent(pendingIntent)
+								.setContent(mContentView);
+
 							
 							// TODO: Send the notification
 
-
-							
-							
+							NotificationManager mNotificationManager = (NotificationManager) mApplicationContext.getSystemService(Context.NOTIFICATION_SERVICE);
+							mNotificationManager.notify(MY_NOTIFICATION_ID,notificationBuilder.build());
 
 							Log.i(TAG, "Notification Area Notification sent");
 						}
