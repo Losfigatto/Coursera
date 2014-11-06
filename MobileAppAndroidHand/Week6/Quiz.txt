@@ -1,0 +1,59 @@
+1.
+	android:typeface
+	android:textColor
+	
+2.
+	None. Drawable is a graphic that goes into a View. The drawing of these graphics is handled by the View system.
+	
+3.
+	View.invalidate()
+	View.onDraw().
+	
+4.
+	FrameAnimation
+	
+5.
+	View animation is limited to only a few View properties. Property animation can animate a wider set of properties.
+	View animation does not actually modify the View Object, just its appearance on the screen, while Property animation will modify the Object being animated.
+	View animation is for Views only. Property animation animates more than just Views.
+	View animation typically requires less code to setup and use than Property animation does.
+	
+6.
+	It defines how specific values in an animation are calculated as a function of time.
+	
+7.
+	ACTION_DOWN
+	
+8.
+	ACTION_CANCEL.
+	ACTION_UP.
+	
+9.
+	Pointers go down one at a time.
+	Pointers come up one at time.
+	Pointers move as a group.
+	
+10.
+	Call Object1.doWork() from the View's onTouchEvent() method.
+	Attach Object1 as a listener of the View and call doWork() from Object1's onTouch() method.
+	
+11.
+	
+	GestureDetector.SimpleOnGestureListener
+	
+12.
+
+	GestureLibrary.recognize().
+	
+13.
+	FALSE
+	
+14.
+	prepare()
+	setDataSource
+
+15.
+	Recording audio.
+	Recording video.
+16.
+TRUE
