@@ -1,0 +1,27 @@
+1.
+SENSOR_DELAY_FASTEST
+
+2.
+A measurement accuracy.
+A sensor identifier.
+A timestamp.
+Sensor-specific measurement values.
+
+3.
+TRUE
+
+4.
+TYPE_ACCELEROMETER.
+TYPE_MAGNETIC_FIELD.
+
+5.
+GPS_PROVIDER
+
+6.
+getLastLocation()
+
+7.
+MapFragment.addMarker
+
+8.
+2
