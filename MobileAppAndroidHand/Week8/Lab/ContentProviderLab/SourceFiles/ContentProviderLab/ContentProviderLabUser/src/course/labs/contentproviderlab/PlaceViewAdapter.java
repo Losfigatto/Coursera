@@ -57,23 +57,19 @@ public class PlaceViewAdapter extends CursorAdapter {
 	@Override
 	public Cursor swapCursor(Cursor newCursor) {
 
-		// TODO - clear the ArrayList list so it contains
+		// DONE - clear the ArrayList list so it contains
 		// the current set of PlaceRecords. Use the
 		// getPlaceRecordFromCursor() method as you add the
 		// cursor's places to the list
 
-
+		mPlaceRecords.clear();
+		while(newCursor.moveToNext()){
+			PlaceRecord placeRec = getPlaceRecordFromCursor(newCursor);
+	        add(placeRec);
+		}
+		
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-
+        return newCursor;
 	}
 
 	// Returns a new PlaceRecord for the data at the cursor's
@@ -140,18 +136,13 @@ public class PlaceViewAdapter extends CursorAdapter {
 
 			ContentValues values = new ContentValues();
 
-			// TODO - Insert new record into the ContentProvider
-
-
-        
-        
-        
-        
-        
-        
-        
-        
-        
+			// DONE - Insert new record into the ContentProvider
+			values.put(PlaceBadgesContract.FLAG_BITMAP_PATH, listItem.getFlagBitmapPath());
+			values.put(PlaceBadgesContract.COUNTRY_NAME, listItem.getCountryName());
+			values.put(PlaceBadgesContract.PLACE_NAME, listItem.getPlace());
+			values.put(PlaceBadgesContract.LAT, listItem.getLocation().getLatitude());
+			values.put(PlaceBadgesContract.LON, listItem.getLocation().getLongitude());
+            mContext.getContentResolver().insert(PlaceBadgesContract.CONTENT_URI, values);
         }
 
 	}
@@ -163,9 +154,8 @@ public class PlaceViewAdapter extends CursorAdapter {
 	public void removeAllViews() {
 		mPlaceRecords.clear();
 
-		// TODO - delete all records in the ContentProvider
-
-        
+		// DONE - delete all records in the ContentProvider
+		mContext.getContentResolver().delete(PlaceBadgesContract.CONTENT_URI, null, null);
         
 	}
 
