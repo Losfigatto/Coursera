@@ -63,11 +63,16 @@ public class PlaceViewAdapter extends CursorAdapter {
 		// cursor's places to the list
 
 		mPlaceRecords.clear();
-		while(newCursor.moveToNext()){
-			PlaceRecord placeRec = getPlaceRecordFromCursor(newCursor);
-	        add(placeRec);
+		if(null!=newCursor){
+			if (newCursor.moveToFirst()) {
+				do {
+					mPlaceRecords.add(getPlaceRecordFromCursor(newCursor));
+				} while (newCursor.moveToNext() == true);
+			}
+				// Set the NotificationURI for the new cursor
+				newCursor.setNotificationUri(mContext.getContentResolver(),
+				PlaceBadgesContract.CONTENT_URI);
 		}
-		
         
         return newCursor;
 	}
@@ -143,6 +148,7 @@ public class PlaceViewAdapter extends CursorAdapter {
 			values.put(PlaceBadgesContract.LAT, listItem.getLocation().getLatitude());
 			values.put(PlaceBadgesContract.LON, listItem.getLocation().getLongitude());
             mContext.getContentResolver().insert(PlaceBadgesContract.CONTENT_URI, values);
+            mContext.getContentResolver().notifyChange(PlaceBadgesContract.CONTENT_URI, null);
         }
 
 	}

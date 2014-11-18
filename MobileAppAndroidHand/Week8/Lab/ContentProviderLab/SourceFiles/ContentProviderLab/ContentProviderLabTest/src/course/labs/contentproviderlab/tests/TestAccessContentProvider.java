@@ -2,7 +2,6 @@ package course.labs.contentproviderlab.tests;
 
 import android.database.Cursor;
 import android.test.ActivityInstrumentationTestCase2;
-import android.util.Log;
 
 import com.robotium.solo.Solo;
 
