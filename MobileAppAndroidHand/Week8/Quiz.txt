@@ -1,0 +1,45 @@
+1.
+  True
+
+2.
+  onSharedPreferenceChanged
+
+3.
+  ContextWrapper.openFileInput
+
+4.
+  Environment.MEDIA_MOUNTED
+
+5.
+  It helps to determine which rows to extract from the database
+
+6. 
+  It specifies a symbolic name for the ContentProvider
+
+7.
+  Because if a View already exists, the CursorAdapter can reuse it in bindView().
+
+8.
+  This application uses a CursorLoader to load it's data. In onCreate() it has no data to display.
+
+9.
+  ContentValues has methods for adding key/value pairs.
+  The key names passed to a ContentValues object correspond to columns defined in the ContentProvider.
+  
+10.
+  False
+
+11.
+  False
+
+12.
+  After a component calls Context.bindService()
+
+13.
+  If the last time the Service was started it was started with the id, startId, then stopSelf() terminates the Service.
+
+14.
+  True
+
+15.
+  When the Service must be accessed concurrently by multiple client components.
