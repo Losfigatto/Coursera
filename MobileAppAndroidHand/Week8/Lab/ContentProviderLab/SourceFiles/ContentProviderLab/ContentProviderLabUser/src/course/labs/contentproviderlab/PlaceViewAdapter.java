@@ -7,6 +7,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import android.content.ContentResolver;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -161,7 +162,13 @@ public class PlaceViewAdapter extends CursorAdapter {
 		mPlaceRecords.clear();
 
 		// DONE - delete all records in the ContentProvider
-		mContext.getContentResolver().delete(PlaceBadgesContract.CONTENT_URI, null, null);
+		ContentResolver resolver = mContext.getContentResolver();
+		Cursor cursor = resolver.query(PlaceBadgesContract.CONTENT_URI, null, null, null, null);
+		while(cursor.moveToNext()) {
+            String lookupKey = cursor.getString(cursor.getColumnIndex(PlaceBadgesContract._ID));
+			Uri uri = Uri.withAppendedPath(PlaceBadgesContract.CONTENT_URI, lookupKey);
+			resolver.delete(uri, null, null);
+		}
         
 	}
 

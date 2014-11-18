@@ -123,8 +123,8 @@ public class PlaceViewActivity extends ListActivity implements
 		mCursorAdapter = new PlaceViewAdapter(getApplicationContext(), y, 0);
 
 		// DONE - Initialize the loader
-		 getLoaderManager().initLoader(1, null, this);
-	        getListView().setAdapter(mCursorAdapter);
+		 getLoaderManager().initLoader(0, null, this);
+	     setListAdapter(mCursorAdapter);
 		
 	}
 
@@ -245,6 +245,9 @@ public class PlaceViewActivity extends ListActivity implements
 	}
 
 	
+	String[] CONTACTS_ROWS = new String[] { PlaceBadgesContract._ID,
+			PlaceBadgesContract.FLAG_BITMAP_PATH,PlaceBadgesContract.LAT,PlaceBadgesContract.LON,
+			PlaceBadgesContract.PLACE_NAME,PlaceBadgesContract.COUNTRY_NAME};
 	// LoaderCallback methods
 	@Override
 	public Loader<Cursor> onCreateLoader(int arg0, Bundle arg1) {
@@ -252,7 +255,7 @@ public class PlaceViewActivity extends ListActivity implements
 		
 		// TODO - Create a new CursorLoader and return it
 		
-		return new CursorLoader(this, PlaceBadgesContract.CONTENT_URI, null,
+		return new CursorLoader(this, PlaceBadgesContract.CONTENT_URI, CONTACTS_ROWS,
 				null, null, null);
 	}
 
