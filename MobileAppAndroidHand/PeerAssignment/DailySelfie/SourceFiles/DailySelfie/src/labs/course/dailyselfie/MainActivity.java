@@ -8,7 +8,6 @@ import java.util.Date;
 import android.app.ListActivity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -67,7 +66,7 @@ public class MainActivity extends ListActivity{
 				
 				SelfieModel model = (SelfieModel)mSelfieAdapter.getItem(position);
 				// Add the ID of the thumbnail to display as an Intent Extra
-				intent.putExtra(EXTRA_RES_ID, model.getPathFile());
+				intent.putExtra(EXTRA_RES_ID, model.getUriFile().getPath());
 				
 				// Start the ImageViewActivity
 				startActivity(intent);
@@ -97,20 +96,20 @@ public class MainActivity extends ListActivity{
         return super.onOptionsItemSelected(item);
     }
     
-    
+    private File mTempPathImage;
 
     private void dispatchTakePictureIntent() {
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
-        	File photoFile = null;
+        	mTempPathImage = null;
             try {
-                photoFile = createImageFile();
+            	mTempPathImage = createImageFile();
             } catch (IOException ex) {
-                
+                Log.e(TAG,"Errore nella creazione di un file temporaneo", ex);
             }
             // Continue only if the File was successfully created
-            if (photoFile != null) {
-                takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(photoFile));
+            if (mTempPathImage != null) {
+                takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(mTempPathImage));
                 
                 startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
             }
@@ -120,10 +119,9 @@ public class MainActivity extends ListActivity{
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
-            Bundle extras = data.getExtras();
-            Bitmap imageBitmap = (Bitmap) extras.get("data");
-            
-            Toast.makeText(getApplicationContext(), "BitMap is null? "+(imageBitmap==null), Toast.LENGTH_SHORT).show();
+            mSelfieAdapter.add(new SelfieModel(mTempPathImage));
+            mTempPathImage = null;
+//            Toast.makeText(getApplicationContext(), "BitMap is null? "+(imageBitmap==null), Toast.LENGTH_SHORT).show();
         }
     }
     
@@ -131,7 +129,7 @@ public class MainActivity extends ListActivity{
         // Create an image file name
         String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
         String imageFileName = JPEG_PREFIX + timeStamp + "_";
-        File storageDir = SelfieListAdapter.getDirecotryStorage();
+        File storageDir = Environment.getExternalStorageDirectory();
         File image = File.createTempFile(
             imageFileName,  /* prefix */
             JPEG_EXT,         /* suffix */

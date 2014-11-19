@@ -1,18 +1,17 @@
 package labs.course.dailyselfie;
 
-import java.io.File;
 import java.util.ArrayList;
 
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.os.Environment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class SelfieListAdapter extends BaseAdapter {
 
@@ -60,8 +59,8 @@ public class SelfieListAdapter extends BaseAdapter {
 
 	private void setPic(String mCurrentPhotoPath,ImageView mImageView) {
 	    // Get the dimensions of the View
-	    int targetW = mImageView.getWidth();
-	    int targetH = mImageView.getHeight();
+	    int targetW = mContext.getResources().getDimensionPixelSize(R.dimen.image_dim_Width);
+	    int targetH = mContext.getResources().getDimensionPixelSize(R.dimen.image_dim_Height);
 
 	    // Get the dimensions of the bitmap
 	    BitmapFactory.Options bmOptions = new BitmapFactory.Options();
@@ -83,22 +82,22 @@ public class SelfieListAdapter extends BaseAdapter {
 	}
 	
 	private void setList(){
-		
-		if (Environment.getExternalStorageState().equals(
-				Environment.MEDIA_MOUNTED)) {
-			for( File img : getDirecotryStorage().listFiles()){
-				
-				SelfieModel model = new SelfieModel(img);
-				list.add(model);
-			}
-		}
+
+//		File[] elencoImmagini = null;
+//			if(elencoImmagini!=null && elencoImmagini.length>0){
+//				for( File img : getDirecotryStorage().listFiles()){
+//					
+//					SelfieModel model = new SelfieModel(img);
+//					list.add(model);
+//				}
+//			}else{
+				Toast.makeText(mContext, "No Selfie present!", Toast.LENGTH_SHORT).show();
+//			}
 		
 	}
 	
-	public static File getDirecotryStorage(){
-		return new File(
-				Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES).getAbsolutePath()
-				+"/DailySelfie/");
+	public void add(SelfieModel modello){
+		list.add(modello);
+		notifyDataSetChanged();
 	}
-	
 }

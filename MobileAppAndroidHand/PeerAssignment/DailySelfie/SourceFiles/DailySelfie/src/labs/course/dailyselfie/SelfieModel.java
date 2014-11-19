@@ -17,8 +17,7 @@ public class SelfieModel {
 	public SelfieModel(File img) {
 		pathFile = img.getAbsolutePath();
 		uriFile = Uri.fromFile(img);
-		int index = img.getName().replace(MainActivity.JPEG_PREFIX, "").indexOf("_");
-		nameFile = img.getName().substring(MainActivity.JPEG_PREFIX.length(), index);
+		nameFile = img.getName().substring(MainActivity.JPEG_PREFIX.length(), MainActivity.JPEG_PREFIX.length()+15);
 	}
 	
 	public String getPathFile() {

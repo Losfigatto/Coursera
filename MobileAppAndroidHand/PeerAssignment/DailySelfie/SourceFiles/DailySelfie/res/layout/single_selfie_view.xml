@@ -6,8 +6,8 @@
 
     <ImageView
         android:id="@+id/imageSelfie"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/image_dim_Width"
+        android:layout_height="@dimen/image_dim_Height"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:src="@drawable/stub" />

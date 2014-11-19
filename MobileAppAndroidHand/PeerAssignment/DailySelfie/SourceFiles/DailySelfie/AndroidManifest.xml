@@ -25,6 +25,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        
+        <activity android:name=".ImageViewActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" >
+                </action>
+
+                <data
+                    android:mimeType="image/*"
+                    android:scheme="android.resource" >
+                </data>
+
+                <category android:name="android.intent.category.DEFAULT" >
+                </category>
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
