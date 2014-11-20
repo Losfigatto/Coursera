@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">DailySelfie</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="emptyText">No Selfie acquired!</string>
     <string name="action_camera">Camera</string>
 
 </resources>

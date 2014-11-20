@@ -5,9 +5,10 @@
     android:orientation="vertical" >
 
     <ImageView
+        android:contentDescription="@null"
         android:id="@+id/imageSelfie"
-        android:layout_width="@dimen/image_dim_Width"
-        android:layout_height="@dimen/image_dim_Height"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:src="@drawable/stub" />
@@ -16,9 +17,7 @@
         android:id="@+id/nameFile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/imageSelfie"
-        android:layout_marginBottom="49dp"
-        android:layout_marginLeft="39dp"
+        android:layout_centerVertical="true"
         android:layout_toRightOf="@+id/imageSelfie" />
 
 </RelativeLayout>    

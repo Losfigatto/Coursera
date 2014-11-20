@@ -8,5 +8,6 @@
         android:showAsAction="ifRoom"
         android:icon="@drawable/ic_action_camera"
         android:title="@string/action_camera"/>
+    
 
 </menu>

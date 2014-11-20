@@ -40,6 +40,9 @@
                 </category>
             </intent-filter>
         </activity>
+        
+        <receiver android:name=".AlarmNotificationReceiver" >
+        </receiver>
     </application>
 
 </manifest>
